@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="line_world">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Black strip (the line) -->
+    <model name="line_track">
+      <static>true</static>
+      <link name="track">
+        <visual name="line_visual">
+          <geometry>
+            <box>
+              <size>5000 0.1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <collision name="line_collision">
+          <geometry>
+            <box>
+              <size>5 0.1 0.01</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
